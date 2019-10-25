@@ -11,12 +11,29 @@
     <div id='Calendar'></div>
 
     <div id='appReview'></div>
+    <script>
+      var url=window.location.href;
+      url = url.split(':')[0]+':' + url.split(':')[1]
 
+    </script>
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-    <script src="http://localhost:3010/main.js"></script>
+    <script>
+        document.write("<script src='" + url + ":3010/main.js'></scr" + "ipt>");
+    </script>
+    <script>
+        document.write("<script src='" + url + ":3001/bundle.js'></scr" + "ipt>");
+    </script>
+    <script>
+        document.write("<script src='" + url + ":8000/bundle.js'></scr" + "ipt>");
+    </script>
+
+
+    <!-- <script src="http://localhost:3010/main.js"></script>
     <script src="http://localhost:3001/bundle.js"></script>
-    <script src="http://localhost:8000/bundle.js"></script>
+    <script src="http://localhost:8000/bundle.js"></script> -->
+
+
 
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
